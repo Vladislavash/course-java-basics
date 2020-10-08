@@ -21,7 +21,29 @@ public class Task08 {
         Scanner scanner = new Scanner(System.in);
         int damage = (args.length != 2) ? scanner.nextInt() : Integer.parseInt(args[0]);
         String typeMob = (args.length != 2) ? scanner.next() : args[1];
-
+        switch (typeMob) {
+            case "UNDEAD":
+                System.out.println(damage * 15 / 10);
+                break;
+            case "ZOMBIE":
+                System.out.println(damage * 15 / 10);
+                break;
+            case "SAINT":
+                System.out.println(damage / 2);
+                break;
+            case "ANIMAL":
+                System.out.println(damage);
+                break;
+            case "HUMANOID":
+                System.out.println(damage);
+                break;
+            case "PLANT":
+                System.out.println(damage);
+                break;
+            case "GHOST":
+                System.out.println(damage);
+                break;
+        }
         //TODO
         // Код, решающий задачу пишем ниже, при этом используяся переменные объявленные выше (их можно изменять)
         // Для проверки решения необходимо запустить @Test для данного class (в директории test)

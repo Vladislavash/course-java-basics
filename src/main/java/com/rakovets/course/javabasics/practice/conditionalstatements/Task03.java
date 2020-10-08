@@ -19,7 +19,15 @@ public class Task03 {
         // Код необходимый для тестирования, не изменять
         Scanner scanner = new Scanner(System.in);
         int healthPointPercentage = (args.length != 1) ? scanner.nextInt() : Integer.parseInt(args[0]);
-
+        if ( healthPointPercentage < 25 && healthPointPercentage >= 0 ) {
+            System.out.println("RED");
+        } else if ( healthPointPercentage >= 25 && healthPointPercentage < 50 ) {
+            System.out.println("ORANGE");
+        } else if ( healthPointPercentage < 75 && healthPointPercentage >= 50 ) {
+            System.out.println("YELLOW");
+        } else if ( healthPointPercentage <= 100 && healthPointPercentage >= 75 ) {
+            System.out.println("GREEN");
+        }
         //TODO
         // Код, решающий задачу пишем ниже, при этом используяся переменные объявленные выше (их можно изменять)
         // Для проверки решения необходимо запустить @Test для данного class (в директории test)

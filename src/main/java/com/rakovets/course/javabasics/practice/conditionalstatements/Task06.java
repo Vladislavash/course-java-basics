@@ -25,7 +25,15 @@ public class Task06 {
         Scanner scanner = new Scanner(System.in);
         int tanksKilledFirstPlayer = (args.length != 2) ? scanner.nextInt() : Integer.parseInt(args[0]);
         int tanksKilledSecondPlayer = (args.length != 2) ? scanner.nextInt() : Integer.parseInt(args[1]);
-
+        if ( tanksKilledFirstPlayer > tanksKilledSecondPlayer ) {
+            int x = 500 + 100 * tanksKilledFirstPlayer;
+            System.out.println("Player 1: " + x + ". Player 2: " + tanksKilledSecondPlayer * 100);
+        } else if ( tanksKilledFirstPlayer < tanksKilledSecondPlayer ){
+            int y =  500 + 100 * tanksKilledSecondPlayer;
+            System.out.println("Player 1: " + tanksKilledFirstPlayer * 100 + ". Player 2: " + y);
+        } else {
+            System.out.println("Player 1: " + tanksKilledFirstPlayer * 100 + ". Player 2: " + tanksKilledSecondPlayer * 100);
+        }
         //TODO
         // Код, решающий задачу пишем ниже, при этом используяся переменные объявленные выше (их можно изменять)
         // Для проверки решения необходимо запустить @Test для данного class (в директории test)

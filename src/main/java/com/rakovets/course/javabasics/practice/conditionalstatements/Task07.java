@@ -21,7 +21,13 @@ public class Task07 {
         // Код необходимый для тестирования, не изменять
         Scanner scanner = new Scanner(System.in);
         int year = (args.length != 1) ? scanner.nextInt() : Integer.parseInt(args[0]);
-
+        int x = year % 4;
+        int y = year % 400;
+        if (x == 0 && y != 0 ) {
+            System.out.println("leap year");
+        } else {
+            System.out.println("not a leap year");
+        }
         //TODO
         // Код, решающий задачу пишем ниже, при этом используяся переменные объявленные выше (их можно изменять)
         // Для проверки решения необходимо запустить @Test для данного class (в директории test)

@@ -25,7 +25,17 @@ public class Task11 {
         // Код необходимый для тестирования, не изменять
         Scanner scanner = new Scanner(System.in);
         char letter = (args.length != 1) ? scanner.next().charAt(0) : args[0].charAt(0);
-
+        if (Character.isAlphabetic(letter)) {
+            if (Character.UnicodeBlock.of(letter).equals(Character.UnicodeBlock.BASIC_LATIN)) {
+                System.out.println("latin");
+            } else if (Character.UnicodeBlock.of(letter).equals(Character.UnicodeBlock.CYRILLIC)) {
+                System.out.println("cyrillic");
+            }
+        } else if (Character.isDigit(letter)) {
+            System.out.println("digit");
+        } else {
+            System.out.println("undefined");
+        }
         //TODO
         // Код, решающий задачу пишем ниже, при этом используяся переменные объявленные выше (их можно изменять)
         // Для проверки решения необходимо запустить @Test для данного class (в директории test)
