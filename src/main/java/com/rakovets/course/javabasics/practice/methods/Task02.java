@@ -27,6 +27,16 @@ public class Task02 extends StandardInputTask {
         //TODO
         // Код, решающий задачу пишем ниже, при этом используя параметры метода
         // Для проверки решения необходимо запустить @Test для данного class (в директории test)
-        return null;
+        if ( 0 > hour | hour > 24 ) {
+            return null ;
+        } else if ( 5 <= hour && hour <= 11 ) {
+            return "Good morning";
+        } else if ( 12 <= hour && hour <= 15 ) {
+            return "Good day";
+        } else if ( 16 <= hour && hour <= 23 ) {
+            return "Good evening";
+        } else {
+            return "Good night";
+        }
     }
 }
