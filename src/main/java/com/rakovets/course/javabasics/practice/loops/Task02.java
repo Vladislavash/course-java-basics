@@ -21,7 +21,17 @@ public class Task02 {
         // Код необходимый для тестирования, не изменять
         int rows = (args.length != 2) ? scanner.nextInt() : Integer.parseInt(args[0]);
         boolean headerRowEnable = (args.length != 2) ? scanner.nextBoolean() : Boolean.parseBoolean(args[1]);
-
+        if (headerRowEnable) {
+            String str =" ";
+            System.out.println(str);
+            for (int i = 1; i < rows; i++) {
+                System.out.println(i);
+            }
+        } else {
+            for (int i = 1; i <= rows; i++) {
+                System.out.println(i);
+            }
+        }
         //TODO
         // Код, решающий задачу пишем ниже, при этом используяся переменные объявленные выше (их можно изменять)
         // Для проверки решения необходимо запустить @Test для данного class (в директории test)

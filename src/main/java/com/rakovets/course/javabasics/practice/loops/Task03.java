@@ -22,7 +22,7 @@ public class Task03 {
         double depositAmount = (args.length != 3 ? scanner.nextDouble() : Double.parseDouble(args[0]));
         double annualDepositPercent = (args.length != 3 ? scanner.nextDouble() : Double.parseDouble(args[1]));
         int depositTerm = (args.length != 3 ? scanner.nextInt() : Integer.parseInt(args[2]));
-
+        System.out.println(Math.round((depositAmount * Math.pow((1 + annualDepositPercent / 100), depositTerm)) * 100d) / 100d);
         //TODO
         // Код, решающий задачу пишем ниже, при этом используяся переменные объявленные выше (их можно изменять)
         // Для проверки решения необходимо запустить @Test для данного class (в директории test)

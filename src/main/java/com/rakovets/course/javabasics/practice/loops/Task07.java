@@ -22,9 +22,18 @@ public class Task07 {
         int startDistance = (args.length != 3) ? scanner.nextInt() : Integer.parseInt(args[0]);
         int finishDistance = (args.length != 3) ? scanner.nextInt() : Integer.parseInt(args[1]);
         double dailyProgress = (args.length != 3) ? scanner.nextDouble() : Double.parseDouble(args[2]);
-
-        //TODO
-        // Код, решающий задачу пишем ниже, при этом используяся переменные объявленные выше (их можно изменять)
-        // Для проверки решения необходимо запустить @Test для данного class (в директории test)
+            int day = 0;
+            double startDistance1 = (double) startDistance;
+            double finishDistance1 = (double) finishDistance;
+            while (startDistance1 < finishDistance1) {
+                startDistance1 = startDistance1 * (1 + dailyProgress / 100);
+                day++;
+                {
+                    System.out.println("day");
+                }
+            }
+        }
     }
-}
+    //TODO
+    // Код, решающий задачу пишем ниже, при этом используяся переменные объявленные выше (их можно изменять)
+    // Для проверки решения необходимо запустить @Test для данного class (в директории test)

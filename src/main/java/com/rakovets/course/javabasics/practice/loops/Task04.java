@@ -23,7 +23,9 @@ public class Task04 {
         int healthPoints = (args.length != 3) ? scanner.nextInt() : Integer.parseInt(args[0]);
         double regenerationPercentFromCurrentHealth = (args.length != 3) ? scanner.nextDouble() : Double.parseDouble(args[1]);
         double hoursAfterRespawn = (args.length != 3) ? scanner.nextDouble() : Double.parseDouble(args[2]);
-
+        double HP = healthPoints * Math.pow((1 + regenerationPercentFromCurrentHealth / 100), hoursAfterRespawn);
+        int result = (int)HP;
+        System.out.println(result);
         //TODO
         // Код, решающий задачу пишем ниже, при этом используяся переменные объявленные выше (их можно изменять)
         // Для проверки решения необходимо запустить @Test для данного class (в директории test)
