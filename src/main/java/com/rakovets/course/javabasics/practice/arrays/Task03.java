@@ -32,9 +32,18 @@ public class Task03 extends StandardInputTask {
         //TODO
         // Код, решающий задачу пишем ниже, при этом используя параметры метода
         // Для проверки решения необходимо запустить @Test для данного class (в директории test)
-        return null;
+        double[] markSaverage = new double[marks.length];
+        int marks1 = 0;
+        double marks2 = 0.00;
+        for (int i = 0; i < marks.length; i++) {
+            marks2 = 0.00;
+            marks1 = 0;
+            for (int j = 0; j < marks[i].length; j++) {
+                marks2 = marks2 + marks[i][j];
+                marks1++;
+            } markSaverage[i] = Math.round((marks2 / marks1) * 100) / 100.00;
+        } return markSaverage;
     }
-
     /**
      * Возвращает минимальную отметку по предметам за весь период обучения.
      *
@@ -45,7 +54,16 @@ public class Task03 extends StandardInputTask {
         //TODO
         // Код, решающий задачу пишем ниже, при этом используя параметры метода
         // Для проверки решения необходимо запустить @Test для данного class (в директории test)
-        return null;
+        int[] marksMin = new int[marks.length];
+        for (int i = 0; i < marks.length; i++) {
+            int resultMin = marks[i][0];
+            for (int j = 0; j < marks[i].length; j++) {
+                if (marks[i][j] < resultMin) {
+                    resultMin = marks[i][j];
+                }
+            } marksMin[i] = resultMin;
+        }
+        return marksMin;
     }
 
     /**
@@ -58,7 +76,16 @@ public class Task03 extends StandardInputTask {
         //TODO
         // Код, решающий задачу пишем ниже, при этом используя параметры метода
         // Для проверки решения необходимо запустить @Test для данного class (в директории test)
-        return null;
+        int[] marksMax = new int[marks.length];
+        for (int i = 0; i < marks.length; i++) {
+            int resultMax = marks[i][0];
+            for (int j = 0; j < marks[i].length; j++) {
+                if (marks[i][j] > resultMax) {
+                    resultMax = marks[i][j];
+                }
+            } marksMax[i] = resultMax;
+        }
+        return marksMax;
     }
 
     private static int[][] nextArray(int countDisciplines, int countSemesters) {

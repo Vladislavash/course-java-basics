@@ -32,7 +32,15 @@ public class Task02 extends StandardInputTask {
         //TODO
         // Код, решающий задачу пишем ниже, при этом используя параметры метода
         // Для проверки решения необходимо запустить @Test для данного class (в директории test)
-        return 0.0;
+        double markSaverage = 0.00;
+        int marks1 = 0;
+        for (int i = 0; i < marks.length; i++) {
+            for (int j = 0; j < marks[i].length; j++) {
+                markSaverage = (markSaverage + (double) marks[i][j]);
+                marks1++;
+            }
+        }
+        return (Math.round((markSaverage / marks1) * 100) / 100.00);
     }
 
     /**
@@ -45,9 +53,15 @@ public class Task02 extends StandardInputTask {
         //TODO
         // Код, решающий задачу пишем ниже, при этом используя параметры метода
         // Для проверки решения необходимо запустить @Test для данного class (в директории test)
-        return 0;
+        int marksMin = marks[0][0];
+        for (int i = 0; i < marks.length; i++) {
+            for (int j = 0; j < marks[i].length; j++) {
+                if (marks[i][j] < marksMin) {
+                    marksMin = marks[i][j];
+                }
+            }
+        }  return marksMin;
     }
-
     /**
      * Возвращает максимальну отметку за весь период обучения.
      *
@@ -58,7 +72,14 @@ public class Task02 extends StandardInputTask {
         //TODO
         // Код, решающий задачу пишем ниже, при этом используя параметры метода
         // Для проверки решения необходимо запустить @Test для данного class (в директории test)
-        return 0;
+        int marksMax = marks[0][0];
+        for (int i = 0; i < marks.length; i++) {
+            for (int j = 0; j < marks[i].length; j++) {
+            if (marks[i][j] > marksMax) {
+                marksMax= marks[i][j];
+            }
+            }
+        }  return marksMax;
     }
 
     private static int[][] nextArray(int countDisciplines, int countSemesters) {
